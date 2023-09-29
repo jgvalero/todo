@@ -1,0 +1,10 @@
+<%- include('partials/header.ejs') %>
+
+    <h1>Todo List</h1>
+
+    <form action="/submit">
+        <input type="text" name="item" required>
+        <input type="submit" value="Add Item">
+    </form>
+
+    <%- include('partials/footer.ejs') %>
