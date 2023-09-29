@@ -2,15 +2,15 @@
 
 <h1 class="text-light">Personal To-Do List</h1>
 <div class="panel rounded col-12">
-  <form action="/" method="POST">
+  <form action="/work" method="POST">
     <div class="input-group p-3">
       <input type="text" class="form-control" name="item" required />
       <input type="submit" class="btn btn-primary" value="Add Item" />
     </div>
   </form>
 
-  <% if (locals.items) { %> <% for( let index=0; index < items.length; index++ )
-  { %>
+  <% if (locals.itemsWork) { %> <% for( let index=0; index < itemsWork.length;
+  index++ ) { %>
   <div class="mx-3 mb-3 form-check">
     <input
       class="form-check-input"
@@ -18,7 +18,7 @@
       name="checked"
       id="checked"
     />
-    <label class="form-check-label"> <%= items[index] %> </label>
+    <label class="form-check-label"> <%= itemsWork[index] %> </label>
   </div>
 
   <% } %> <% } %>
