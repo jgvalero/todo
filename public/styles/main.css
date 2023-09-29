@@ -1,3 +1,11 @@
+header {
+    background-color: #142d4c;
+}
+
 body {
-    background-color: darkslategray;
+    background-color: #385170;
+}
+
+.panel {
+    background-color: #9fd3c7;
 }

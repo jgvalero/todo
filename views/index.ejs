@@ -1,10 +1,25 @@
 <%- include('partials/header.ejs') %>
 
-    <h1>Todo List</h1>
-
-    <form action="/submit">
-        <input type="text" name="item" required>
-        <input type="submit" value="Add Item">
+  <h1>Todo List</h1>
+  <div class="panel col-6 rounded">
+    <form action="/" method="POST">
+      <div class="input-group p-3">
+        <input type="text" class="form-control" name="item" required />
+        <input type="submit" class="btn btn-primary" value="Add Item" />
+      </div>
     </form>
 
-    <%- include('partials/footer.ejs') %>
+    <% if (locals.items) { %>
+      <% for( let index=0; index < items.length; index++ ) { %>
+        <div class="m-3 form-check">
+          <input class="form-check-input" type="checkbox" name="checked" id="checked" />
+          <label class="form-check-label">
+            <%= items[index] %>
+          </label>
+        </div>
+
+        <% } %>
+          <% } %>
+  </div>
+
+  <%- include('partials/footer.ejs') %>
