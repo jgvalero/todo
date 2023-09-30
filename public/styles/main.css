@@ -9,3 +9,7 @@ body {
 .panel {
   background-color: #9fd3c7;
 }
+
+.form-check-input:checked + label {
+  text-decoration: line-through;
+}
